@@ -24,7 +24,10 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'AGV_tf2 = AGV_ros2.AGV_tf2:main'
+            'AGV_tf2 = AGV_ros2.AGV_tf2:main',
+            'static_base_tf = AGV_ros2.static_base_tf:main',
+            'static_lidar_tf = AGV_ros2.static_lidar_tf:main',
+            'odom_tf = AGV_ros2.odom_tf:main',
         ],
     },
 )
