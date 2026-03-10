@@ -14,11 +14,11 @@ class StaticLidarTf(Node):
         t.header.stamp = self.get_clock().now().to_msg()
         
         t.header.frame_id = 'base_link'
-        t.child_frame_id = 'scan'
+        t.child_frame_id = 'lidar_link'
         
-        t.transform.translation.x = 0.20
+        t.transform.translation.x = 0.075
         t.transform.translation.y = 0.0
-        t.transform.translation.z = 0.15
+        t.transform.translation.z = 0.105
         
         q = quaternion_from_euler(0, 0, 0)
         
@@ -29,7 +29,7 @@ class StaticLidarTf(Node):
         
         broadcaster.sendTransform(t)
         
-        self.get_logger().info("base_link -> scan published")
+        self.get_logger().info("base_link -> lidar_link published")
         
 def main():
     rclpy.init()

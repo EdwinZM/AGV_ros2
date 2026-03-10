@@ -18,7 +18,7 @@ class StaticBaseTf(Node):
         
         t.transform.translation.x = 0.0
         t.transform.translation.y = 0.0
-        t.transform.translation.z = 0.10 
+        t.transform.translation.z = 0.0 
         
         q = quaternion_from_euler(0, 0, 0)
         

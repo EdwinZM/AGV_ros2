@@ -25,7 +25,7 @@ class OdomTF(Node):
         t.header.frame_id = 'odom'
         t.child_frame_id = 'base_footprint'
         
-        t.transform.translation = mgs.pose.pose.position
+        t.transform.translation = msg.pose.pose.position
         t.transform.rotation = msg.pose.pose.orientation
         
         self.br.sendTransform(t)
