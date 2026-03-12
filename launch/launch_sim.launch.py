@@ -48,7 +48,9 @@ def generate_launch_description():
             # '--ros-args',
             # '-p',
             # '/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock',
-            '/odom@nav_msgs/msg/Odometry[gz.msgs.Odometry',
+            '/odom@nav_msgs/msg/Odometry[gz.msgs.Odometry', # "[" indicates it comes from, "@" indicates it goes to
+            # '/scan@sensor_msgs/msg/LaserScan@gz.msgs.LaserScan',
+            # '/scan/points@sensor_msgs/msg/PointCloud2@gz.msgs.PointCloudPacked',
             # '/keyboard/keypress@std_msgs/msg/Int32@gz.msgs.Int32',
             # '/cmd_vel@geometry_msgs/msg/Twist[gz.msgs.Twist'
 
